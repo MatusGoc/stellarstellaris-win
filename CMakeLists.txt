@@ -27,8 +27,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 
 #add_subdirectory(lib/luajit)
-add_compile_options(-DCAPSTONE_ARCHITECTURE_DEFAULT=OFF)
-add_compile_options(-DCAPSTONE_X86_SUPPORT=ON)
+set(CAPSTONE_ARCHITECTURE_DEFAULT OFF CACHE BOOL "Don't build all archs" FORCE)
+set(CAPSTONE_X86_SUPPORT ON CACHE BOOL "Build for x86" FORCE)
 add_subdirectory(lib/capstone)
 add_subdirectory(lib/sigmatch)
 
