@@ -1802,7 +1802,7 @@ class CPdxFontAtlasOldGui {
     struct CPdxRecursiveMutex _Mutex;
     struct CGuiGraphics* _GuiGraphics;
     struct FontContextFONT* _FontContext;
-    class CPdxArray<CPdxFontAtlasOldGui::SAtlasInfo, int> _Atlases;
+    class CPdxArray<SAtlasInfo, int> _Atlases;
     int _nWidth;
     int _nHeight;
     int _nMaxNumAtlasTextures;
@@ -2077,7 +2077,7 @@ struct SGfxEffect {
     struct RasterizerStateGFX * _RasterizerState;
     class CPdxArray<SamplerGFX*,int> _SamplersPixel;
     class CPdxArray<SamplerGFX*,int> _SamplersVertex;
-    class CPdxArray<SGfxEffect::SReloadCallback,int> _ReloadCallbacks;
+    class CPdxArray<SReloadCallback,int> _ReloadCallbacks;
 };
 
 struct SVertexDescription {
@@ -2216,7 +2216,7 @@ struct CBitmapFont {
     struct CColor _Color;
     struct CColor _OldColor;
     struct CColor _ModColor;
-    class CPdxArray<CBitmapFont::SBitmapFontCharset, int> _CharSets;
+    class CPdxArray<SBitmapFontCharset, int> _CharSets;
     int _nCurrentCharset;
     struct SColorCode _ColorOverrides[256];
     bool _bIconsAddHeight;
@@ -8573,4 +8573,3 @@ struct CObjectType {
     undefined field14_0x33;
     int _TokenType;
 };
-
